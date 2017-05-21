@@ -169,3 +169,21 @@ Before you make a pull request, please be sure to follow these super simple inst
 2. In Terminal, `cd` to the `countUp.js` directory.
 3. Run `npm install`, which installs gulp and its dependencies.
 4. Run `gulp`, which copies and minifies the .js files to the `dist` folder.
+
+## Multi couter up
+```js
+$.each($('.js-countup'), function () {
+    var count = $(this).data('count'),
+        numAnim = new CountUp(this, 0, count);
+
+    numAnim.start();
+});
+```
+
+The markup then just needs a class and data attribute:
+
+```html
+<span class="js-countup" data-count="97"></span>
+<span class="js-countup" data-count="73"></span>
+<span class="js-countup" data-count="67"></span>
+```
